@@ -2,6 +2,11 @@ name: CI - FastAPI + Pytest + Docker
 
 on: [push, pull_request]
 
+# Добавьте этот блок, чтобы выдать права для публикации в GHCR
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
